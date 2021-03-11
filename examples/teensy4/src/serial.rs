@@ -80,6 +80,7 @@ fn main() -> ! {
     let mut device = UsbDeviceBuilder::new(&bus, UsbVidPid(0x5824, 0x27dd))
         .product("imxrt-usbd")
         .device_class(usbd_serial::USB_CLASS_CDC)
+        .max_packet_size_0(64)
         .build();
 
     loop {

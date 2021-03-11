@@ -37,6 +37,7 @@ default-features = false
 # USB device
 [dependencies.usb-device]
 version = "0.2"
+features = ["test-class-high-speed"]
 
 # USB CDC class
 [dependencies.usbd-serial]
@@ -70,3 +71,7 @@ path = "src/support.rs"
 [[bin]]
 name = "test_class"
 path = "src/test_class.rs"
+
+[patch.crates-io.usb-device]
+git = "https://github.com/imxrt-rs/usb-device.git"
+branch = "imxrt-test-class-support"

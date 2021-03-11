@@ -118,7 +118,7 @@ impl FullSpeed {
         // This forces the bus to run at full speed, not high speed. Specifically,
         // it disables the chirp. If you're interested in playing with a high-speed
         // USB driver, you'll want to remove this line, or clear PFSC.
-        ral::modify_reg!(ral::usb, self.usb, PORTSC1, PFSC: 1);
+        ral::modify_reg!(ral::usb, self.usb, PORTSC1, PFSC: 0);
 
         ral::modify_reg!(ral::usb, self.usb, USBSTS, |usbsts| usbsts);
         // Disable interrupts by default
