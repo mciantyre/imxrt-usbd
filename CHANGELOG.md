@@ -4,6 +4,9 @@ Changelog
 [Unreleased]
 ------------
 
+Add an optional `imxrt-ral` feature. When enabled, this package provides a
+`Peripherals` implementation using imxrt-ral instances.
+
 [0.3.0] 2024-05-29
 ------------------
 
